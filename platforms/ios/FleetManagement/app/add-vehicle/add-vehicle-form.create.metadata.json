@@ -1,0 +1,70 @@
+{
+    "isReadOnly": false,
+    "commitMode": "Immediate",
+    "validationMode": "Immediate",
+    "propertyAnnotations": [
+        {
+            "name": "_id",
+            "ignore": true
+        },
+        {
+            "name": "image",
+            "ignore": true
+        },
+        {
+            "name": "_acl",
+            "ignore": true
+        },
+        {
+            "name": "readyToPick",
+            "ignore": true
+        },
+        {
+            "name": "_kmd",
+            "ignore": true
+        },
+        {
+            "name": "registrationPLate",
+            "displayName": "Registration Plate",
+            "editor": "Text",
+            "index": 1,
+            "validators": [
+                {
+                    "name": "NonEmpty"
+                }
+            ]
+        },
+        {
+            "name": "vin",
+            "displayName": "Vin",
+            "editor": "Text",
+            "index": 2,
+            "validators": [
+                {
+                    "name": "NonEmpty"
+                }
+            ]
+        },
+        {
+            "name": "year",
+            "displayName": "Year",
+            "editor": "Number",
+            "index": 3,
+            "validators": []
+        },
+        {
+            "name": "model",
+            "displayName": "Model",
+            "editor": "Text",
+            "index": 4,
+            "validators": []
+        },
+        {
+            "name": "make",
+            "displayName": "Make",
+            "editor": "Text",
+            "index": 5,
+            "validators": []
+        }
+    ]
+}

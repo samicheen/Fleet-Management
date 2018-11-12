@@ -1,0 +1,18 @@
+<ActionBar title="{{title}}">
+</ActionBar>
+<GridLayout class="detail-page" >
+	<StackLayout class="form" *ngIf="(item | async) as item; else loading">
+	    <GridLayout columns="300, auto" rows = "50, 50, 50">
+			<Label [text]="item[0].serviceType === 'car_wash'? 'Car Wash' : item[0].serviceType === 'change_oil'? 'Change Oil' : 'Rotate Tires'" col="0" row="0"></Label>
+			<Image *ngIf="item[0].completed===1" src="res://tick" col="1" row="0" width="35" height="35"></Image>
+			<Label [text]="item[1].serviceType === 'car_wash'? 'Car Wash' : item[1].serviceType === 'change_oil'? 'Change Oil' : 'Rotate Tires'" col="0" row="1"></Label>
+			<Image *ngIf="item[1].completed===1" src="res://tick" col="1" row="1" width="35" height="35"></Image>
+			<Label [text]="item[2].serviceType === 'car_wash'? 'Car Wash' : item[2].serviceType === 'change_oil'? 'Change Oil' : 'Rotate Tires'" col="0" row="2"></Label>
+			<Image *ngIf="item[2].completed===1" src="res://tick" col="1" row="2" width="35" height="35"></Image>
+	    </GridLayout>
+	</StackLayout>
+	
+	<ng-template #loading>
+	    <ActivityIndicator [busy]="true"></ActivityIndicator>
+	</ng-template>
+</GridLayout>

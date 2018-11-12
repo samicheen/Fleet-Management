@@ -1,0 +1,20 @@
+PODS:
+  - IQKeyboardManager (5.0.8)
+  - SAMKeychain (1.5.3)
+
+DEPENDENCIES:
+  - IQKeyboardManager (~> 5.0.0)
+  - SAMKeychain (~> 1.5.2)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - IQKeyboardManager
+    - SAMKeychain
+
+SPEC CHECKSUMS:
+  IQKeyboardManager: 266cb7b1d11f94a3e71229d77f960f9a1b538e5b
+  SAMKeychain: 483e1c9f32984d50ca961e26818a534283b4cd5c
+
+PODFILE CHECKSUM: e165279eaa6bbf14e8707c33cdf32ef63c6e2ecc
+
+COCOAPODS: 1.5.3

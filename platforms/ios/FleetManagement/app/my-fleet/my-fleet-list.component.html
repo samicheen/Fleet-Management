@@ -1,0 +1,20 @@
+<ActionBar title="">
+	<ActionItem ios.position="right" (tap)="addTapped()">
+		<Label text="Add"></Label>
+	</ActionItem>
+</ActionBar>
+<GridLayout>
+	<RadListView class="-two-lines" *ngIf="(items | async) as items; else loading" [items]="items" (itemTap)="onItemTap($event)" pullToRefresh="true" (pullToRefreshInitiated)="onPullToRefreshInitiated($event)">
+	    <ng-template let-item="item">
+	        <GridLayout class="-separator" columns="300, auto" rows = "auto, auto">
+	            <Label text="{{ item.model }} {{ item.make }} {{ item.year }}" col="0" row="0"></Label>
+				<Label text="{{ item.registrationPLate }}" col="0" row="1"></Label>
+				<Image *ngIf="item.readyToPick===1" src="res://tick" col="1" rowspan="2" width="40" height="40"></Image>
+	        </GridLayout>
+	    </ng-template>
+	</RadListView >
+	
+	<ng-template #loading>
+	    <ActivityIndicator [busy]="true"></ActivityIndicator>
+	</ng-template>
+</GridLayout>

@@ -1,0 +1,15 @@
+<ActionBar title="">
+</ActionBar>
+<GridLayout class="detail-page" >
+	<StackLayout class="form" *ngIf="(item | async) as item; else loading">
+	    <StackLayout>
+	    	<Label [ngClass] = "{ 'green': item[0].completed===1 }" [text]="item[0].serviceType === 'car_wash'? 'Car Wash' : item[0].serviceType === 'change_oil'? 'Change Oil' : 'Rotate Tires'"></Label>
+			<Label [ngClass] = "{ 'green': item[1].completed===1 }" [text]="item[1].serviceType === 'car_wash'? 'Car Wash' : item[1].serviceType === 'change_oil'? 'Change Oil' : 'Rotate Tires'"></Label>
+	    	<Label [ngClass] = "{ 'green': item[2].completed===1 }" [text]="item[2].serviceType === 'car_wash'? 'Car Wash' : item[2].serviceType === 'change_oil'? 'Change Oil' : 'Rotate Tires'"></Label>
+	    </StackLayout>
+	</StackLayout>
+	
+	<ng-template #loading>
+	    <ActivityIndicator [busy]="true"></ActivityIndicator>
+	</ng-template>
+</GridLayout>
